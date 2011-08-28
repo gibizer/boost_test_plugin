@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Boost_unit_test_plugin_test
+Bundle-SymbolicName: boost_unit_test_plugin_test
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit,
+ org.eclipse.ui.console;bundle-version="3.5.100",
+ org.eclipse.jface.text;bundle-version="3.7.0"

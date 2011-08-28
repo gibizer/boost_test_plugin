@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Boost_unit_test_plugin
+Bundle-SymbolicName: boost_unit_test_plugin; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: boost_unit_test_plugin.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.7.100",
+ org.eclipse.jface.text;bundle-version="3.7.0",
+ org.eclipse.cdt;bundle-version="8.0.0",
+ org.eclipse.cdt.ui;bundle-version="5.3.0",
+ org.eclipse.cdt.make.core;bundle-version="7.1.0",
+ org.eclipse.cdt.core;bundle-version="5.3.0",
+ org.eclipse.core.expressions;bundle-version="3.4.300",
+ org.eclipse.cdt.launch;bundle-version="7.0.0",
+ org.eclipse.cdt.debug.ui;bundle-version="7.1.0",
+ org.eclipse.debug.ui;bundle-version="3.7.0",
+ org.eclipse.ui.console;bundle-version="3.5.100"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

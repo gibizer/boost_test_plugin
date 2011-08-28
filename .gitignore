@@ -1,0 +1,5 @@
+boost_example/Debug
+boost_unit_test_plugin/bin
+boost_unit_test_plugin/.settings
+boost_unit_test_plugin_test/bin
+boost_unit_test_plugin_test/.settings

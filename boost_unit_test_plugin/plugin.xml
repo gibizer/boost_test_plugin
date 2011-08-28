@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="BoostTestView"
+            icon="icons/sample.gif"
+            category="boost_unit_test_plugin"
+            class="boost_unit_test_plugin.views.BoostTestView"
+            id="boost_unit_test_plugin.views.BoostTestView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.cdt.ui.CPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="boost_unit_test_plugin.views.BoostTestView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="boost_unit_test_plugin.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="boost_unit_test_plugin.commands.category"
+            id="boost_unit_test_plugin.commands.executeTestCommand"
+            name="Boost Test Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="boost_unit_test_plugin.handlers.ExecuteTestHandler"
+            commandId="boost_unit_test_plugin.commands.executeTestCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="boost_unit_test_plugin.commands.executeTestCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="boost_unit_test_plugin.toolbars.sampleToolbar">
+            <command
+                  commandId="boost_unit_test_plugin.commands.executeTestCommand"
+                  icon="icons/sample.gif"
+                  id="boost_unit_test_plugin.toolbars.sampleCommand"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>
